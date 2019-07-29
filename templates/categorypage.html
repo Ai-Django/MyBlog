@@ -1,0 +1,74 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+
+{% block leftcontent %}
+    <!--左侧内容区-->
+    <div class="content-wrap">
+    <div class="content">
+     <script type="text/javascript" src="{% static 'js/slider.js' %}"></script>
+     <div>
+      <div class="left-ad" style="clear: both;background-color: #fff; width: 30%;float: left;margin-right:2%;"></div>
+     </div>
+        {% for article in all_articles %}
+            <article class="excerpt">
+      <header>
+       <a class="label label-important" href="{% url 'blog:article_category' article.category.bigCategory.slug article.category.slug %}">{{ article.category.name }}<i class="label-arrow"></i></a>
+       <h2><a target="_blank" href="{% url 'blog:article_detail' article.id %}" title="{{ article.title }}">{{ article.title }} </a></h2>
+      </header>
+      <div class="focus">
+       <a target="_blank" href="/article/2081/"> <img class="thumb" width="200" height="123" src="{{ MEDIA_URL }}{{ article.image }}" alt="{{ article.title }}"> </a>
+      </div>
+      <span class="note">{{ article.description }}</span>
+      <p class="auth-span"> <span class="muted"><i class="fa fa-user"></i> <a href="/accounts/profile/?next=/">{{ article.author }}</a> </span> <span class="muted"><i class="fa fa-clock-o"></i> {{ article.add_time|date:"Y-m-d" }}</span> <span class="muted"><i class="fa fa-eye"></i> {{ article.read_nums }}浏览</span> <span class="muted"><i class="fa fa-comments-o"></i> <a target="_blank" href="/article/2081#comments">{{ article.content_nums }}评论</a> </span> <span class="muted"><a href="javascript:;" data-action="ding" data-id="65" id="Addlike" class="action"> <i class="fa fa-heart-o"></i><span class="count">{{ article.like_nums }}</span>喜欢</a> </span> </p>
+     </article>
+        {% endfor %}
+
+    <div class="pagination">
+{#        <span class="step-links">#}
+        <ul>
+        {% if all_articles.has_previous %}
+            <li class="long"><a href="?page=1">第一页</a></li>
+            <li class="long"><a href="?page={{ all_articles.previous_page_number }}">上一页</a></li>
+{#            <a href="?page=1">&laquo; 第一页</a>#}
+{#            <a href="?page={{ articles.previous_page_number }}">上一页</a>#}
+        {% endif %}
+
+        {% for page in all_articles.paginator.page_range %}
+            {% if page %}
+                {% ifequal page all_articles.number %}
+                    <li class="active"><a href="?page={{ page }}">{{ page }}</a></li>
+                {% else %}
+                    <li><a href="?page={{ page }}">{{ page }}</a></li>
+                {% endifequal %}
+            {% else %}
+                <li class="none"><a href="">...</a></li>
+            {% endif %}
+        {% endfor %}
+
+{#        <span class="current">#}
+{#            Page {{ articles.number }} of {{ articles.paginator.num_pages }}.#}
+{#        </span>#}
+
+        {% if all_articles.has_next %}
+            <li class="long"><a href="?page={{ all_articles.next_page_number }}">下一页</a></li>
+            <li class="long"><a href="?page={{ all_articles.paginator.num_pages }}">最后一页</a></li>
+{#            <a href="?page={{ articles.next_page_number }}">下一页</a>#}
+{#            <a href="?page={{ articles.paginator.num_pages }}">最后一页 &raquo;</a>#}
+        {% endif %}
+        </ul>
+{#        </span>#}
+     </div>
+
+{#     <div class="pagination">#}
+{#      <ul>#}
+{#       <li class="active"><a href="?page=1">1</a></li>#}
+{#       <li class="next-page"><a href="?page=2">2</a></li>#}
+{#       <li class="next-page"><a href="?page=3">3</a></li>#}
+{#       <li><span>...</span></li>#}
+{#       <li><a href="?page=7">7</a></li>#}
+{#      </ul>#}
+{#     </div>#}
+    </div>
+   </div>
+    <!--左侧内容区结束-->
+{% endblock %}
