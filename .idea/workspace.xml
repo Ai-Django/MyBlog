@@ -1,249 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14ffdba9-72e6-4c29-b719-f39487ea602a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/newblog.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/blog/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/blog/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/blog/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/blog/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/blog/migrations/0002_auto_20190728_2013.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/blog/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/blog/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/blog/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/blog/templatetags/blog_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/blog/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/blog/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/blog/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0002_auto_20190722_2040.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0003_auto_20190722_2042.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0004_auto_20190722_2134.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0005_auto_20190722_2142.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0006_auto_20190724_2143.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0007_auto_20190725_2127.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0008_auto_20190725_2130.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0009_userpro_image.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0010_auto_20190726_2008.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0011_auto_20190726_2020.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0012_auto_20190726_2048.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0013_auto_20190726_2103.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0014_auto_20190727_0007.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0015_auto_20190727_0024.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0016_auto_20190727_1556.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0017_auto_20190727_1605.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0018_auto_20190727_1607.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0019_auto_20190727_1610.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0020_auto_20190727_1614.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0021_auto_20190727_1619.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0022_auto_20190727_1623.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/article/2019/07/20190417202752.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/article/2019/07/20190417202752_6FaJaP0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/article/2019/07/20190417203831.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/article/2019/07/20190417203831_6k21yvc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/article/2019/07/20190417203924.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/article/2019/07/20190417204051.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/article/2019/07/20190417205112.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/article/2019/07/20190417205112_xqAuQQe.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/article/2019/07/20190417205114.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/article/2019/07/20190417205116.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/article/2019/07/20190417205116_UvTqBQB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/article/2019/07/20190420162547.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/article/2019/07/20190420162547_UcJoH7W.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/article/2019/07/20190420162547_j9FBaZc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/media/banner/20190414234423.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/media/banner/20190414234423_JbE2tJs.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/media/banner/20190415210204.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/media/banner/20190417205112.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/media/banner/20190417205114.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/media/banner/20190417205118.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newblog/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newblog/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newblog/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newblog/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/crayon.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/fontawesome-webfont_251ce3ca2a9349558f5f6ae3a3fb979f.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/fontawesome-webfont_40f82671aff94540b799279e7d74c9fa.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/fontawesome-webfont_9f85209c915d4f65b8b370d4b0e35355.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/fontawesome-webfont_cdb2430ba1604abbb10c77eeb59b57b3.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/github.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/github_42d30fbc749b42709f1df18d97b73687.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/latex.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/monaco-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/monaco-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/monaco-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/monaco.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/nivo-slider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/page-list.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/print.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/public.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/monaco-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/monaco-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/monaco-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/monaco-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/autumn.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/borland.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/bw.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/colorful.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/emacs.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/friendly.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/fruity.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/github.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/manni.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/monokai.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/murphy.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/native.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/pastie.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/perldoc.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/tango.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/trac.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/vim.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/vs.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/highlights/zenburn.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190414230315.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190414234423.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190415210204.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417202531.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417202712.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417202752.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417202820.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417202839.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417202931.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417203238.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417203241.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417203428.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417203829.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417203831.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417203924.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417204051.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417204350.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/201904172043501.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417205110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417205112.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417205114.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417205116.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417205118.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417205544.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190417222808.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190420162547.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/20190725215824.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/alipay.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/any.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/arrows.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/bullets.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/buttons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/collage-min.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/community-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/crayon_tinymce.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/docs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/donate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/fontawesome-webfont_74225448dae148ba85f5d56c5ed7f533.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/github.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/google.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/monaco-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/pause.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/picture.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/picture_47f548de66804272b27fff2a0959c28d.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/twitter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/wordpress-blue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/公众号.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/广告.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/激进的Coder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/进击的Coder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/crayon.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery.fitvids.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery.nivo.slider.pack.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/wp-embed.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/article.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base_right.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/categorypage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/cooperation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/exchange.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/message.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/question.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/resources.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/reward.html" afterDir="false" />
-    </list>
+    <list default="true" id="14ffdba9-72e6-4c29-b719-f39487ea602a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/base_right.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="45" column="19" lean-forward="true" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+            <state relative-caret-position="301">
+              <caret line="51" column="48" lean-forward="true" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
               <folding>
                 <element signature="e#1336#1356#0#HTML" expanded="true" />
               </folding>
@@ -588,15 +346,24 @@
       <workItem from="1564213442908" duration="16440000" />
       <workItem from="1564232561956" duration="8181000" />
       <workItem from="1564271741203" duration="45939000" />
-      <workItem from="1564404616872" duration="7399000" />
+      <workItem from="1564404616872" duration="7704000" />
     </task>
+    <task id="LOCAL-00001" summary="Beta1.0">
+      <created>1564412065690</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1564412065690</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127430000" />
+    <option name="totallyTimeSpent" value="127735000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18766756" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -648,6 +415,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Beta1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beta1.0" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/static/images/20190417205118.jpg">
@@ -952,8 +723,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base_right.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="45" column="19" lean-forward="true" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+        <state relative-caret-position="301">
+          <caret line="51" column="48" lean-forward="true" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
           <folding>
             <element signature="e#1336#1356#0#HTML" expanded="true" />
           </folding>
