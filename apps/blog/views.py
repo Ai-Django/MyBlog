@@ -124,6 +124,8 @@ class ArticleCategoryView(View):
 class ArticleDetailView(View):
     def get(self, request, article_id):
         articles = Article.objects.get(id=int(article_id))
+        articles.read_nums += 1
+        articles.save()
         return render(request, 'article.html', {
             'article': articles
         })
