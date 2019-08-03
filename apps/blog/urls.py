@@ -14,13 +14,10 @@ urlpatterns = [
     url(r'^logout/$', LogoutView.as_view(), name="logout"),
     url(r'^login/$', LoginView.as_view(), name="login"),
     url(r'^register/$', RegisterView.as_view(), name="register"),
-    url(r'^forget/$', ForgetPwdView.as_view(), name="forget_pwd"),
-    # 喜欢
-    # url(r'^love/$', LoveView, name='love'),
     url(r'^add_like/$', AddLikeView, name="add_like"),
-    # url(r'^category/about/$', AboutView, name='about'),
-    # url(r'^category/donate/$', DonateView, name='donate'),
-    # url(r'^category/exchange/$', ExchangeView, name='exchange'),
-    # url(r'^category/project/$', ProjectView, name='project'),
-    # url(r'^category/question/$', QuestionView, name='question'),
+    url(r'^forget/$', ForgetPwdView.as_view(), name="forget_pwd"),
+    # url(r'^active/(?P<active_code>.*)/$', ActiveUserView.as_view(), name="user_active"),
+    # url(r'^forget/$', ForgetPwdView.as_view(), name="forget_pwd"),
+    # url(r'^reset/(?P<active_code>.*)/$', ResetView.as_view(), name="reset_pwd"),
+    # url(r'^modify_pwd/$', ModifyPwdView.as_view(), name="modify_pwd"),
 ]

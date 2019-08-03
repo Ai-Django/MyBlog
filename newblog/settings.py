@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',  # 添加人性化过滤器
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
+    'captcha',
 ]
 AUTH_USER_MODEL = 'users.UserPro'
 
@@ -140,3 +141,10 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+
+EMAIL_HOST = "smtp.163.com"
+EMAIL_PORT = 25
+EMAIL_HOST_USER = ""
+EMAIL_HOST_PASSWORD = ""
+EMAIL_USE_TLS = False
+EMAIL_FROM = ""

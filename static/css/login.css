@@ -47,9 +47,12 @@ a:hover{
 
 
 .login-box{
+    position:relative;
     width:853px;
+    height: 200px;
     margin:150px auto;
     color: white;
+    bottom: 150px;
 }
 .hd-login{
     position:relative;
@@ -146,10 +149,12 @@ a:hover{
 .form-box{
     position:relative;
     width:290px;
-    height: 472px;
-    padding:0 40px;
+    height: 420px;
+    padding:0 60px;
     background:#fff;
     color:#666;
+    left: 200px;
+    top:30px;
 }
 .form-box > h2,
 .form-box > .tab{
@@ -319,7 +324,7 @@ a:hover{
 }
 .btn{
     width:100%;
-    height:50px;
+    height:70px;
     line-height:42px;
     font-size:14px;
     color:#fff;

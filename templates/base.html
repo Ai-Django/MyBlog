@@ -243,10 +243,27 @@
     <!--登录-->
     <!--目前登录功能只有注册登录其它没必要没做-->
     <div class="pull-right">
-     <i class="fa fa-power-off"></i>
-     <a href="{% url 'blog:login' %}">登录</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     <i class="fa fa-user-plus"></i>
-     <a href="/accounts/register/?next=/">注册</a>
+            {% if request.user.is_authenticated %}
+{#                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-bell-o"></i>#}
+{#                {% get_unread_count user as count %}#}
+{#                    <a href="{% url 'comment:note' %}">#}
+{#                    {% if count %}<span class="get-msg text-center">{{ count }}</span>#}
+{#                        消息{% else %}消息{% endif %}#}
+{#                    </a>#}
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user"></i>
+                    <a href="{% url 'blog:index' %}" target="_blank">投稿</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                    <a href="{% url 'blog:index' %}">{{ request.user.username }}</a>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i>
+                    <a href="{% url 'blog:logout' %}">退出</a>
+            {% else %}
+                <i class="fa fa-power-off"></i>
+                <a href="{% url 'blog:login' %}">登录</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa fa-user-plus"></i>
+                <a href="{% url 'blog:register' %}">注册</a>
+            {% endif %}
     </div>
     <!--登录注册结束-->
     <!--公告-->

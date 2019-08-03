@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% block title %} 博客登陆 {% endblock title %}
 {% block top_css %}
-    <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+{#    <link rel="stylesheet" type="text/css" href="/static/css/reset.css">#}
     <link rel="stylesheet" type="text/css" href="/static/css/login.css">
 {% endblock %}
 {% block leftcontent %}
@@ -30,7 +30,6 @@
 {#</div>#}
 {#</div>#}
 {#<div class="bg" id="dialogBg"></div>#}
-        <div class="login-box clearfix">
 {#            <div class="fl slide">#}
 {#                <div class="imgslide">#}
 {#                    <ul class="imgs">#}
@@ -38,10 +37,12 @@
 {#                    </ul>#}
 {#                </div>#}
 {#            </div>#}
-            <div class="fl form-box">
+    <div class="c-box bg-box">
+        <div class="login-box clearfix">
+            <div class="f1 form-box">
                 <h2>帐号登录</h2>
                 <form action="/login/" method="post" autocomplete="off">
-                    <input type='hidden' name='csrfmiddlewaretoken' value='mymQDzHWl2REXIfPMg2mJaLqDfaS1sD5' />
+{#                    <input type='hidden' name='csrfmiddlewaretoken' value='mymQDzHWl2REXIfPMg2mJaLqDfaS1sD5' />#}
                     <div class="form-group marb20 {% if login_form.errors.username %}errorput{% endif %}">
                         <label>用&nbsp;户&nbsp;名</label>
                         <input name="username" id="account_l" type="text" placeholder="手机号/邮箱" />
@@ -53,14 +54,15 @@
                     <div class="error btns login-form-tips" id="jsLoginTips">{% for key,error in login_form.errors.items %}{{ error }}{% endfor %} {{ msg }}</div>
                      <div class="auto-box marb38">
 
-                        <a class="fr" href="{% url 'blog:forget_pwd' %}">忘记密码？</a>
+                        <a class="fr" href="{% url 'blog:register' %}">忘记密码？</a>
                      </div>
-                     <input style="width:100px;height:50px;background: whitesmoke" id="jsLoginBtn" type="submit" value="立即登录 > " />
+                     <input style="width:100px;height:50px;background: whitesmoke;color: #f78585" id="jsLoginBtn" type="submit" value="立即登录 > " />
                 {% csrf_token %}
                 </form>
                 <p class="form-p">没有Blog帐号？<a href="{% url 'blog:register' %}">[立即注册]</a></p>
             </div>
         </div>
+    </div>
 {% endblock leftcontent %}
 {% block end_js %}
     <script src="/static/js/jquery.min.js" type="text/javascript"></script>
