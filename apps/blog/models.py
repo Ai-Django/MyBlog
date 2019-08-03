@@ -4,6 +4,8 @@ from django.db import models
 
 from users.models import UserPro
 
+from DjangoUeditor.models import UEditorField
+
 # Create your models here.
 
 
@@ -87,7 +89,8 @@ class Article(models.Model):
     author = models.ForeignKey(UserPro, default="", verbose_name="作者")
     title = models.CharField(max_length=30, default="", verbose_name="文章标题")
     description = models.TextField(default="", verbose_name="文章简介")
-    body = models.TextField(default="", verbose_name="文章内容")
+    # body = models.TextField(default="", verbose_name="文章内容")
+    body = UEditorField(default="", verbose_name="文章内容")
     image = models.ImageField(upload_to="article/%Y/%m", default="", verbose_name="文章封面", max_length=100)
     read_nums = models.IntegerField(default=0, verbose_name="浏览人数")
     content_nums = models.IntegerField(default=0, verbose_name="评论数")

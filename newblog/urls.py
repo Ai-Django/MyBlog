@@ -24,4 +24,6 @@ urlpatterns = [
     url(r'', include("blog.urls", namespace="blog")),
     url(r'media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
     url(r'^captcha/', include('captcha.urls')),
+    # 富文本相关url
+    url(r'^ueditor/', include('DjangoUeditor.urls')),
 ]
