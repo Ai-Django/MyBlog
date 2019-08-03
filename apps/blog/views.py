@@ -1,9 +1,11 @@
 from django.core.paginator import Paginator, PageNotAnInteger
 # from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
+from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
 from django.views import View
+from django.views.decorators.csrf import csrf_exempt
 
 from .models import Article, BigCategory, ArticleCategory, Banner, ArticleTag
 
@@ -147,3 +149,27 @@ class DateArticleView(View):
         return render(request, 'categorypage.html', {
             'all_articles': all_articles
         })
+
+
+# class AddLikeView(View):
+#     def post(self, request):
+#         article_id = request.POST.get('article_id', '')
+#         if article_id:
+#             article = Article.objects.get(id=int(article_id))
+#             article.like_nums += 1
+#             article.save()
+#             return HttpResponse('{"status":"success","msg":"您已经点过赞了"}', content_type='application/json')
+#         else:
+#             return HttpResponse('{"status":"fail","msg":"点赞出错了"}', content_type='application/json')
+
+
+@csrf_exempt
+def AddLikeView(request):
+    article_id = request.POST.get('article_id', '')
+    if article_id:
+        article = Article.objects.get(id=int(article_id))
+        article.like_nums += 1
+        article.save()
+        return HttpResponse('{"status":"success","msg":"您已经点过赞了"}', content_type='application/json')
+    else:
+        return HttpResponse('{"status":"fail","msg":"点赞出错了"}', content_type='application/json')

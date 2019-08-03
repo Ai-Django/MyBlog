@@ -99,6 +99,7 @@ class Article(models.Model):
     class Meta:
         verbose_name = "文章"
         verbose_name_plural = verbose_name
+        ordering = ['-add_time']
 
     def get_week_time(self):
         return (datetime.datetime.now() - self.add_time).days // 7
@@ -108,7 +109,7 @@ class Article(models.Model):
         for tag in self.tag.all():
             articles = Article.objects.filter(tag=tag)
             all_article = all_article | articles
-        #all_articles = all_articles.order_by('-add_time')[:4]
+        # all_articles = all_articles.order_by('-add_time')[:4]
         return all_article
 
     def get_article_tag(self):
@@ -123,7 +124,7 @@ class Banner(models.Model):
     number = models.IntegerField(verbose_name='编号', help_text='编号决定图片播放的顺序，图片不要多于5张')
     title = models.CharField(verbose_name='标题', max_length=20, blank=True, null=True, help_text='标题可以为空')
     content = models.CharField(verbose_name='描述', max_length=80)
-    image = models.ImageField(upload_to="media/banner", default="", max_length=300, verbose_name="图片")
+    image = models.ImageField(upload_to="banner/%Y/%m", default="", max_length=300, verbose_name="图片")
     img_url = models.CharField(verbose_name='图片地址', default="#", max_length=200, help_text="如果把资源放在第三方储存里，这里写图片地址")
     url = models.CharField(verbose_name='跳转链接', max_length=200, default='#', help_text='图片跳转的超链接，默认#表示不跳转')
 

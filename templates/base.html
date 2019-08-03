@@ -93,9 +93,9 @@
   <link rel="stylesheet" id="l2h_style-css" href="{% static 'css/latex.min.css' %}" type="text/css" media="screen, print">
   <link rel="stylesheet" id="l2h_print_style-css" href="{% static 'css/print.min.css' %}" type="text/css" media="print">
   <link rel="stylesheet" id="style-css" href="{% static 'css/style.css' %}" type="text/css" media="all">
-  <link rel="stylesheet" id="font-awesome-css" href="{% static 'css/font-awesome.css' %}" type="text/css" media="all">
-    {% block top-file %}
-    {% endblock top-file %}
+  <link rel="stylesheet" id="font-awesome-css" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}" type="text/css" media="all">
+    {% block top_css %}
+    {% endblock top_css %}
     <link rel="stylesheet" href="{% static 'highlights/github.css' %}">
     <script type='text/javascript' src='{% static 'js/jquery.js' %}'></script>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
@@ -147,23 +147,23 @@
     </style>
   <meta name="keywords" content="KenZhang,XX,爬虫,Python,C,Java,Django,HTML,JS,教程">
   <meta name="description" content="KenZhang的个人主页">
-  <script type="text/javascript">
-        jQuery(document).ready(function () {
-            jQuery('.video').fitVids();
-        });
-    </script>
+{#  <script type="text/javascript">#}
+{#        jQuery(document).ready(function () {#}
+{#            jQuery('.video').fitVids();#}
+{#        });#}
+{#    </script>#}
   <!--[if lt IE 9]><script src="/static/js/html5.js"></script><![endif]-->
 
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?9f788c75d6899a71ab90c5726df5aba9";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-    </script>
+{#  <script>#}
+{#    var _hmt = _hmt || [];#}
+{#    (function() {#}
+{#      var hm = document.createElement("script");#}
+{#      hm.src = "https://hm.baidu.com/hm.js?9f788c75d6899a71ab90c5726df5aba9";#}
+{#      var s = document.getElementsByTagName("script")[0];#}
+{#      s.parentNode.insertBefore(hm, s);#}
+{#    })();#}
+{#    </script>#}
   <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
      {% block top-js %}
     {% endblock top-js %}
@@ -244,7 +244,7 @@
     <!--目前登录功能只有注册登录其它没必要没做-->
     <div class="pull-right">
      <i class="fa fa-power-off"></i>
-     <a href="/accounts/login/?next=/">登录</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href="{% url 'blog:login' %}">登录</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      <i class="fa fa-user-plus"></i>
      <a href="/accounts/register/?next=/">注册</a>
     </div>
@@ -263,8 +263,6 @@
 
     {% endblock rightcontent %}
 
-    {% block end_file %}
-    {% endblock end_file %}
   </section>
   <!--网站底部-->
   <footer class="footer">
@@ -277,7 +275,7 @@
      <a rel="nofollow" target="_blank" href="https://www.qiniu.com/">七牛云存储 </a>丨
      <a href="/sitemap.xml" title="Sitemap" target="_blank">网站地图</a>
      <div> 
-      <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1276375952'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s96.cnzz.com/z_stat.php%3Fid%3D1276375952%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+{#      <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1276375952'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s96.cnzz.com/z_stat.php%3Fid%3D1276375952%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>#}
      </div>
     </div> 
    </div>
@@ -289,12 +287,14 @@
 <script type='text/javascript' src='{% static 'js/jquery.js' %}'></script>
 <script type='text/javascript' src='{% static 'js/wp-embed.min.js' %}'></script>
 <script type='text/javascript' src='{% static 'js/jquery.nivo.slider.pack.js' %}'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
 
 <!-- xuanfu -->
 <script type="text/javascript">
     /*300*25 创建于 2019-03-2*/
     var cpro_id = "u1959047";
 </script>
-
+{% block end_js %}
+{% endblock end_js %}
 </body>
 </html>
