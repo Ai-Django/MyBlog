@@ -1,4 +1,6 @@
 from django import template
+
+from blog.models import ArticleComments
 from ..models import BigCategory, ArticleCategory, ArticleTag, Article, Banner
 
 register = template.Library()
@@ -42,3 +44,14 @@ def get_banner_right():
     return Banner.objects.filter(number__gt=5, number__lte=10)
 
 
+@register.simple_tag
+def get_article_comment_count(article):
+    return ArticleComments.objects.filter(article=article).count()
+
+
+@register.simple_tag
+def get_article_comment_user_count(article):
+    comments = ArticleComments.objects.filter(article=article).order_by('-add_time')
+    users = [comment.user.id for comment in comments]
+    user_counts = len(users)
+    return user_counts

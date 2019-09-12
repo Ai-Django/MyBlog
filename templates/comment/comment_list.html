@@ -1,0 +1,32 @@
+{% load blog_tags %}
+<div style="background: white;position: relative; top: 0px" class="card-body p-2 p-md-3 f-17" id="comment-list">
+{#    {% if user.is_authenticated %}#}
+    <ul class="list-unstyled">
+        <div class="mb-3">
+            {% get_article_comment_user_count article as users_count %}
+            {% get_article_comment_count article as comments_count %}
+            <strong>{{ users_count }}&nbsp;人参与&nbsp;|&nbsp;{{ comments_count }}&nbsp;条评论</strong>
+        </div><br>
+        {% if comments_count %}
+        {% for comment in article.get_article_comment %}
+        <div style="position: relative; top: 5px" class="comment-parent pt-2" id="com-{{ comment.id }}">
+            <li class="media">
+                <div class="media-body ml-2">
+                    <p class="mt-0 mb-1">
+                        <strong>{{ comment.user }}</strong>
+                        {% if comment.user.is_superuser %}
+                        <small class="text-danger">[博主]</small>
+                        {% endif %}
+                    </p>
+                    <p class="small text-muted">{{ forloop.counter }}楼&nbsp;-&nbsp;{{ comment.add_time }}</p>
+                </div>
+            </li>
+            <div class="comment-body">{{ comment.comments|safe }}</div><br>
+        </div>
+        {% endfor %}
+    {% else %}
+            暂时没有评论，欢迎来尬聊！
+     {% endif %}
+    </ul>
+{#{% endif %}#}
+</div>

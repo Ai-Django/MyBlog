@@ -49,13 +49,15 @@ class RegisterView(View):
         register_form = RegisterForm(request.POST)
         if register_form.is_valid():
             user_name = request.POST.get("email", "")
+            # user_name = str(email).replace('@', '')
+
             if UserPro.objects.filter(email=user_name):
                 return render(request, "register.html", {"register_form": register_form, "msg": "用户已经存在"})
             pass_word = request.POST.get("password", "")
             user_profile = UserPro()
             user_profile.username = user_name
             user_profile.email = user_name
-            user_profile.is_active = True
+            user_profile.is_active = False
             user_profile.password = make_password(pass_word)
             user_profile.save()
 
@@ -65,7 +67,7 @@ class RegisterView(View):
             # user_message.message = "欢迎注册慕学在线网"
             # user_message.save()
             #
-            # send_register_email(user_name,"register")
+            send_register_email(user_name, "register")
             return render(request, "login.html")
         else:
             return render(request, "register.html", {"register_form": register_form})
@@ -87,7 +89,7 @@ class ForgetPwdView(View):
 
 
 class ActiveUserView(View):
-    def get(self,request,active_code):
+    def get(self, request, active_code):
         all_records = EmailVerifyRecord.objects.filter(code=active_code)
         if all_records:
             for record in all_records:
@@ -96,9 +98,9 @@ class ActiveUserView(View):
                 user.is_active = True
                 user.save()
         else:
-            return render(request,"active_fail.html")
+            return render(request, "active_fail.html")
 
-        return render(request,"login.html")
+        return render(request, "login.html")
 
 
 class ResetView(View):

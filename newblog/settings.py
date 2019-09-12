@@ -25,7 +25,7 @@ SECRET_KEY = 'uo6(5w@4fxacgz@d&m#pf9u9pn0xqi-2xjpt!s@5#9ngv3_f57'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
     'captcha',
-    'DjangoUeditor'
+    'DjangoUeditor',
+    'comment'
 ]
 AUTH_USER_MODEL = 'users.UserPro'
 
@@ -146,7 +147,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 EMAIL_HOST = "smtp.163.com"
 EMAIL_PORT = 25
-EMAIL_HOST_USER = ""
-EMAIL_HOST_PASSWORD = ""
+EMAIL_HOST_USER = "你的163邮箱"
+EMAIL_HOST_PASSWORD = "你的邮箱密码"
 EMAIL_USE_TLS = False
-EMAIL_FROM = ""
+EMAIL_FROM = "你的163邮箱"
+
+AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.AllowAllUsersModelBackend']

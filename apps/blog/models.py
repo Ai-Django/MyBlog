@@ -3,7 +3,6 @@ import datetime
 from django.db import models
 
 from users.models import UserPro
-
 from DjangoUeditor.models import UEditorField
 
 # Create your models here.
@@ -118,8 +117,30 @@ class Article(models.Model):
     def get_article_tag(self):
         return self.tag.all()
 
+    def get_article_comment(self):
+        all_comments = ArticleComments.objects.filter(article=self)
+        # all_resources = CourseResource.objects.filter(course=course)
+        # user_courses = UserCourse.objects.filter(course=course)
+        # user_ids = [all_comment.user.id for all_comment in all_comments]
+        # user_counts = user_ids.count()
+        return all_comments  # , user_counts
+
     def __str__(self):
         return self.title
+
+
+class ArticleComments(models.Model):
+    user = models.ForeignKey(UserPro, verbose_name="用户")
+    article = models.ForeignKey(Article, verbose_name="文章")
+    comments = models.CharField(max_length=200, verbose_name="评论")
+    add_time = models.DateTimeField(default=datetime.datetime.now, verbose_name="添加时间")
+
+    class Meta:
+        verbose_name = "课程评论"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.comments[:20]
 
 
 # 轮播图

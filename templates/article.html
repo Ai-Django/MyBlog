@@ -1,6 +1,7 @@
 ﻿{% extends 'base_right.html' %}
 {% load staticfiles %}
-{#{% load blog_tags static %}#}
+{% load static %}
+{% load blog_tags %}
 {% block title %}{{ article.title }}{% endblock title %}
 {% block description %}
     <meta name="description" content="{{ article.description }}"/>
@@ -128,9 +129,7 @@
                                         <div class="popover-content">
                                             <a href="#" class="sinaweibo fa fa-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
                                             <a href="#" class="bds_qzone fa fa-star" data-cmd="qzone" title="分享到QQ空间"></a>
-                                            <a href="#" class="tencentweibo fa fa-tencent-weibo" data-cmd="tqq" title="分享到腾讯微博"></a>
                                             <a href="#" class="qq fa fa-qq" data-cmd="sqq" title="分享到QQ好友"></a>
-                                            <a href="#" class="bds_renren fa fa-renren" data-cmd="renren" title="分享到人人网"></a>
                                             <a href="#" class="bds_weixin fa fa-weixin" data-cmd="weixin" title="分享到微信"></a>
                                             <a href="#" class="bds_more fa fa-ellipsis-h" data-cmd="more"></a>
                                         </div>
@@ -907,7 +906,7 @@
 
 		    <div class="related_top">
 			    <div class="related_posts">
-                <ul class="related_img">
+                    <ul class="related_img">
 {#                    {% get_category_article object as  category_article %}#}
 {#                    {% for article in category_article.article_4 %}#}
 {#                        <li class="related_box"  >#}
@@ -915,26 +914,28 @@
 {#                <img src="{{ article.img_link }}" alt="{{ article.title }}" />	<br><span class="r_title">{{ article.title }}</span></a>#}
 {#                        </li>#}
 {#                    {% endfor %}#}
-                </ul>
-
-                <div class="relates">
-                    <ul>
-                        {% for article in article.get_tag_article %}
-                        <li>
-                            <i class="fa fa-minus"></i>
-                            <a href="{% url 'blog:article_detail' article.id %}">{{ article.title }}</a>
-                        </li>
-                        {% endfor %}
                     </ul>
+
+                    <div class="relates">
+                        <ul>
+                            {% for article in article.get_tag_article %}
+                            <li>
+                                <i class="fa fa-minus"></i>
+                                <a href="{% url 'blog:article_detail' article.id %}">{{ article.title }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
             </div>
+
+            <div class="card mt-2 rounded-0 border-0" id="comment-block">
+                {% include 'comment/editor.html' %}
+
             </div>
+            {% include 'comment/comment_list.html' %}
 
-
-{#            <div class="card mt-2 rounded-0 border-0" id="comment-block">#}
-{#                {% include 'comment/editor.html' %}#}
-{#            </div>#}
-{#		    {% include 'comment_list.html' %}#}
+            </div>
 	    </div>
 </div>
 {% endblock leftcontent %}
@@ -952,6 +953,15 @@
 {#{% endif %}#}
 {#{% endblock %}#}
 {% block end_js %}
+{% if user.is_authenticated %}
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+<script src="{% static 'comment/js/editor.js' %}?v=20190311.05908"></script>
+<script src="{% static 'comment/js/activate-power.js' %}?v=20180120"></script>
+<script>
+var sw=window.screen.width;if(sw>1200){POWERMODE.colorful=true;POWERMODE.shake=false;document.body.addEventListener('input',POWERMODE)};
+
+</script>
+{% endif %}
     <script>
         function add_like(current_elem){
     var article_id = current_elem.attr('data-id');

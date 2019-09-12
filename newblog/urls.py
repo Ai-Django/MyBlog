@@ -26,4 +26,9 @@ urlpatterns = [
     url(r'^captcha/', include('captcha.urls')),
     # 富文本相关url
     url(r'^ueditor/', include('DjangoUeditor.urls')),
+    # url(r'comment', include("comment.urls", namespace="comment")),
 ]
+
+# 全局404页面配置
+handler404 = 'blog.views.page_not_found'
+# handler500 = 'blog.views.page_error'

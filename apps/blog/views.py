@@ -7,6 +7,7 @@ from django.shortcuts import render
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 
+from .models import ArticleComments
 from .models import Article, BigCategory, ArticleCategory, Banner, ArticleTag
 
 
@@ -173,3 +174,54 @@ def AddLikeView(request):
         return HttpResponse('{"status":"success","msg":"您已经点过赞了"}', content_type='application/json')
     else:
         return HttpResponse('{"status":"fail","msg":"点赞出错了"}', content_type='application/json')
+
+
+def page_not_found(request):
+    # 全局404处理函数
+    from django.shortcuts import render_to_response
+    response = render_to_response('404.html', {})
+    response.status_code = 404
+    return response
+
+
+def page_error(request):
+    # 全局500处理函数
+    from django.shortcuts import render_to_response
+    response = render_to_response('500.html', {})
+    response.status_code = 500
+    return response
+
+
+# class CommentView(View):
+#     def get(self, request, article_id):
+#         article = Article.objects.get(id=int(article_id))
+#         all_comments = ArticleComments.objects.filter(article=article)
+#         # all_resources = CourseResource.objects.filter(course=course)
+#         # user_courses = UserCourse.objects.filter(course=course)
+#         user_ids = [all_comment.user.id for all_comment in all_comments]
+#         user_counts = user_ids.count()
+#         # all_user_courses = UserCourse.objects.filter(user_id__in=user_ids)
+#         # 取出所有课程ID
+#         # course_ids = [user_courses.course.id for user_courses in all_user_courses]
+#         # 获取用户学过的相关课程
+#         # relate_courses = Course.objects.filter(id__in=course_ids).order_by("-click_nums")[:5]
+#         return render(request, 'comment/comment_list.html', {
+#             'all_comments': all_comments,
+#             'user_count': user_counts
+#             })
+
+
+class AddCommentsView(View):
+    def post(self, request):
+        article_id = request.POST.get('article_id', 0)
+        comments = request.POST.get('comments', '')
+        if int(article_id) > 0 and comments:
+            article_comments = ArticleComments()
+            article = Article.objects.get(id=int(article_id))
+            article_comments.article = article
+            article_comments.comments = comments
+            article_comments.user = request.user
+            article_comments.save()
+            return HttpResponse('{"status":"success","msg":"添加成功"}', content_type='application/json')
+        else:
+            return HttpResponse('{"status":"fail","msg":"添加失败"}', content_type='application/json')
