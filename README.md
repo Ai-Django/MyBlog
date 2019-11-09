@@ -1,2 +1,2 @@
 # MyBlog
-MyBlog for  first by Django
+My Blog by Django
